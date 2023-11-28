@@ -105,7 +105,7 @@ function App() {
       <h1 className="project-title">freeCodeCamp Data Visualization Project</h1>
     
       <Routes>
-        <Route path="/" element={<Barchart />} />
+        <Route path="/Data-Visualization" element={<Barchart />} />
         <Route path="/barchart" element={<Barchart />} />
         <Route path="/scatterplot" element={<Scatterplot />} />
         <Route path="/heatmap" element={<Heatmap />} />
