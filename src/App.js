@@ -44,6 +44,9 @@ function App() {
     const currentPath = location.pathname;
 
     switch (currentPath) {
+      case '/barchart':
+        setPages(0);
+        break;
       case '/scatterplot':
         setPages(1);
         break;
@@ -55,7 +58,7 @@ function App() {
         break;
       case '/treemap':
         setPages(4);
-        break;
+        break;  
       default:
         setPages(0);
         break;
@@ -63,7 +66,7 @@ function App() {
   }, [location.pathname]);
 
   const barchartButtonClick = () => {
-    navigate('/');
+    navigate('/barchart');
   };
 
   const scatterplotButtonClick = () => {
@@ -92,7 +95,7 @@ function App() {
           value={pages}
           onChange={handleChange}
         >
-          <Tab label="Bat Chart" onClick={barchartButtonClick} sx={{ color: 'white' }} />
+          <Tab label="Bar Chart" onClick={barchartButtonClick} sx={{ color: 'white' }} />
           <Tab label="Scatterplot" onClick={scatterplotButtonClick} sx={{ color: 'white' }} />
           <Tab label="Heat Map" onClick={heatmapButtonClick} sx={{ color: 'white' }} />
           <Tab label="Choropleth Map" onClick={choroplethButtonClick} sx={{ color: 'white' }} />
@@ -100,13 +103,17 @@ function App() {
         </Tabs>
       </Box>
       <h1 className="project-title">freeCodeCamp Data Visualization Project</h1>
+    
       <Routes>
         <Route path="/" element={<Barchart />} />
+        <Route path="/barchart" element={<Barchart />} />
         <Route path="/scatterplot" element={<Scatterplot />} />
         <Route path="/heatmap" element={<Heatmap />} />
         <Route path="/choropleth" element={<Choropleth />} />
         <Route path="/treemap" element={<Treemap />} />
       </Routes>
+      
+      
     </div>
   );
 }
