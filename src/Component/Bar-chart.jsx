@@ -84,7 +84,7 @@ function Barchart() {
       
       <div className="App">
         <div className='tooltip'> </div>
-        <div className="data-holder">
+        <div className="bar-container">
         <h1 className="barchart" id="title">
           United States GDP
         </h1>

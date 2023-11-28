@@ -180,9 +180,9 @@ function Scatterplot() {
 
   return (
     <div className="App">
-        <div className="tooltip"></div>
+        <div className="tooltip"></div> 
         <div className="plot-container">
-        <h1 id="title">Scatter Plot</h1>
+        <div id="title"></div>
           <svg ref={plotRef} width={920} height={630}></svg>
         </div>
         
